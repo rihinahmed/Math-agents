@@ -1,5 +1,5 @@
 {
   "image_url": "https://raw.githubusercontent.com/rihinahmed/Math-agents/main/posters/2026-11-20.png",
-  "caption": "Ready to sharpen your algebra skills for your upcoming exams? Tackle this classic question on factorising and simplifying algebraic expressions! Try it in the comments! Solution pinned below. #IGCSEMaths #OLevelMaths #BeyondTheEquation",
-  "solution": "Answer: 3x\n\n1. Factorise the numerator: 6x^2 - 18x = 6x(x - 3).\n2. Factorise the denominator: 2x - 6 = 2(x - 3).\n3. Rewrite the fraction: [6x(x - 3)] / [2(x - 3)].\n4. Cancel the common factor (x - 3): 6x / 2 = 3x."
+  "caption": "Welcome back to Beyond the Equation! Today we are tackling algebraic expansion and factorisation\u2014a core topic for your IGCSE/O Level exams. Can you handle this difference of two squares challenge?\nTry it in the comments! Solution pinned below.\n#IGCSEMaths #OLevelMaths #Algebra",
+  "solution": "Answer: 4x^2 - 20x + 25 and 4(x - 4)(x - 1)\n\n1. Expand (2x - 5)^2:\n(2x - 5)(2x - 5) = 4x^2 - 10x - 10x + 25 = 4x^2 - 20x + 25.\n\n2. Factorise (2x - 5)^2 - 9 using difference of two squares, a^2 - b^2 = (a - b)(a + b):\nHere, a = (2x - 5) and b = 3.\n((2x - 5) - 3)((2x - 5) + 3) = (2x - 8)(2x - 2).\n\n3. Factorise common factors from each bracket:\n2(x - 4) * 2(x - 1) = 4(x - 4)(x - 1)."
 }

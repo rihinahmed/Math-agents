@@ -3,5 +3,10 @@
     "date": "2026-11-20",
     "topic": "Expanding and factorising algebraic expressions",
     "problem": "Factorise completely: 6x^2 - 18x. Use your answer to simplify (6x^2 - 18x) / (2x - 6)."
+  },
+  {
+    "date": "2026-11-20",
+    "topic": "Expanding and factorising algebraic expressions",
+    "problem": "Expand and simplify: (2x - 5)^2. Hence, factorise completely: (2x - 5)^2 - 9."
   }
 ]
