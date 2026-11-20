@@ -1,0 +1,40 @@
+name: Daily Facebook post
+
+on:
+  schedule:
+    - cron: "30 3 * * *"   # 03:30 UTC = 09:30 in Dhaka
+  workflow_dispatch:
+    inputs:
+      send:
+        description: "yes = send to Make.com (post for real), no = only generate"
+        default: "yes"
+
+permissions:
+  contents: write
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+      - name: Generate poster and caption
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: python post_facebook.py generate
+      - name: Save poster and history to the repo
+        run: |
+          git config user.name "maths-agent"
+          git config user.email "agent@users.noreply.github.com"
+          git add posters history.json payload.json
+          git diff --cached --quiet || (git commit -m "daily poster" && git push)
+      - name: Send to Make.com
+        if: ${{ github.event.inputs.send != 'no' }}
+        env:
+          MAKE_WEBHOOK_URL: ${{ secrets.MAKE_WEBHOOK_URL }}
+        run: |
+          sleep 20
+          python post_facebook.py send
