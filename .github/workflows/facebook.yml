@@ -11,6 +11,8 @@ on:
 
 permissions:
   contents: write
+concurrency:
+  group: daily-post
 
 jobs:
   post:
@@ -30,7 +32,9 @@ jobs:
           git config user.name "maths-agent"
           git config user.email "agent@users.noreply.github.com"
           git add posters history.json payload.json
-          git diff --cached --quiet || (git commit -m "daily poster" && git push)
+          git diff --cached --quiet || git commit -m "daily poster"
+          git pull --rebase -X theirs origin main
+          git push
       - name: Send to Make.com
         if: ${{ github.event.inputs.send != 'no' }}
         env:
