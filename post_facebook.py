@@ -14,7 +14,9 @@ Env vars:
 import datetime
 import json
 import os
+import re
 import textwrap
+import time
 from pathlib import Path
 
 import requests
@@ -24,34 +26,6 @@ HERE = Path(__file__).parent
 HISTORY = HERE / "history.json"
 POSTERS = HERE / "posters"
 PAYLOAD = HERE / "payload.json"
-def pick_model():
-    wanted = os.environ.get("GEMINI_MODEL")
-    if wanted:
-        return wanted
-    r = requests.get(
-        "https://generativelanguage.googleapis.com/v1beta/models",
-        headers={"x-goog-api-key": os.environ["GEMINI_API_KEY"]},
-        params={"pageSize": 200},
-        timeout=30,
-    )
-    r.raise_for_status()
-    names = [
-        m["name"].split("/")[-1]
-        for m in r.json().get("models", [])
-        if "generateContent" in m.get("supportedGenerationMethods", [])
-    ]
-    import re
-    stable = []
-    for n in names:
-        m = re.fullmatch(r"gemini-(\d+(?:\.\d+)?)-flash", n)
-        if m:
-            stable.append((float(m.group(1)), n))
-    if stable:
-        chosen = max(stable)[1]
-    else:
-        chosen = next(n for n in names if "flash" in n)
-    print("Using model:", chosen)
-    return chosen
 
 TOPICS = [
     "Expanding and factorising algebraic expressions",
@@ -84,6 +58,65 @@ def load_history():
         return []
 
 
+def candidate_models():
+    """Return Gemini flash models, newest first, so we can fall back if one is busy."""
+    wanted = os.environ.get("GEMINI_MODEL")
+    if wanted:
+        return [wanted]
+    r = requests.get(
+        "https://generativelanguage.googleapis.com/v1beta/models",
+        headers={"x-goog-api-key": os.environ["GEMINI_API_KEY"]},
+        params={"pageSize": 200},
+        timeout=30,
+    )
+    r.raise_for_status()
+    found = []
+    for m in r.json().get("models", []):
+        name = m["name"].split("/")[-1]
+        if "generateContent" not in m.get("supportedGenerationMethods", []):
+            continue
+        mt = re.fullmatch(r"gemini-(\d+(?:\.\d+)?)-flash(-lite)?", name)
+        if mt:
+            # newer version first; plain flash before flash-lite
+            found.append((float(mt.group(1)), 0 if not mt.group(2) else -1, name))
+    found.sort(reverse=True)
+    names = [n for _, _, n in found]
+    print("Candidate models:", names[:6])
+    return names[:6]
+
+
+def call_gemini(prompt):
+    last_error = None
+    for model in candidate_models():
+        for attempt in range(3):
+            try:
+                r = requests.post(
+                    f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent",
+                    headers={"x-goog-api-key": os.environ["GEMINI_API_KEY"]},
+                    json={
+                        "contents": [{"parts": [{"text": prompt}]}],
+                        "generationConfig": {"responseMimeType": "application/json"},
+                    },
+                    timeout=90,
+                )
+            except requests.RequestException as e:
+                last_error = str(e)
+                time.sleep(5)
+                continue
+            if r.status_code in (429, 500, 502, 503, 504):
+                last_error = f"{model}: {r.status_code}"
+                print("Busy:", last_error, "- retrying")
+                time.sleep(8 * (attempt + 1))
+                continue
+            if r.status_code == 404:
+                last_error = f"{model}: 404"
+                break  # try next model
+            r.raise_for_status()
+            print("Using model:", model)
+            return r.json()["candidates"][0]["content"]["parts"][0]["text"]
+    raise SystemExit(f"All Gemini models failed. Last error: {last_error}")
+
+
 def generate_content(topic, recent):
     prompt = f"""You write daily posts for a maths channel called "Beyond the Equation"
 aimed at O Level / IGCSE students.
@@ -100,17 +133,7 @@ Return ONLY JSON with these keys:
   "caption":  Facebook caption, 2-3 friendly lines, ends with
               "Try it in the comments! Solution pinned below." and 3 hashtags
 Make sure the maths is correct."""
-    r = requests.post(
-        f"https://generativelanguage.googleapis.com/v1beta/models/{pick_model()}:generateContent",
-        headers={"x-goog-api-key": os.environ["GEMINI_API_KEY"]},
-        json={
-            "contents": [{"parts": [{"text": prompt}]}],
-            "generationConfig": {"responseMimeType": "application/json"},
-        },
-        timeout=90,
-    )
-    r.raise_for_status()
-    text = r.json()["candidates"][0]["content"]["parts"][0]["text"]
+    text = call_gemini(prompt)
     return json.loads(text)
 
 
