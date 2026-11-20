@@ -24,7 +24,34 @@ HERE = Path(__file__).parent
 HISTORY = HERE / "history.json"
 POSTERS = HERE / "posters"
 PAYLOAD = HERE / "payload.json"
-MODEL = os.environ.get("GEMINI_MODEL", "gemini-2.5-flash")
+def pick_model():
+    wanted = os.environ.get("GEMINI_MODEL")
+    if wanted:
+        return wanted
+    r = requests.get(
+        "https://generativelanguage.googleapis.com/v1beta/models",
+        headers={"x-goog-api-key": os.environ["GEMINI_API_KEY"]},
+        params={"pageSize": 200},
+        timeout=30,
+    )
+    r.raise_for_status()
+    names = [
+        m["name"].split("/")[-1]
+        for m in r.json().get("models", [])
+        if "generateContent" in m.get("supportedGenerationMethods", [])
+    ]
+    import re
+    stable = []
+    for n in names:
+        m = re.fullmatch(r"gemini-(\d+(?:\.\d+)?)-flash", n)
+        if m:
+            stable.append((float(m.group(1)), n))
+    if stable:
+        chosen = max(stable)[1]
+    else:
+        chosen = next(n for n in names if "flash" in n)
+    print("Using model:", chosen)
+    return chosen
 
 TOPICS = [
     "Expanding and factorising algebraic expressions",
@@ -74,7 +101,7 @@ Return ONLY JSON with these keys:
               "Try it in the comments! Solution pinned below." and 3 hashtags
 Make sure the maths is correct."""
     r = requests.post(
-        f"https://generativelanguage.googleapis.com/v1beta/models/{MODEL}:generateContent",
+        f"https://generativelanguage.googleapis.com/v1beta/models/{pick_model()}:generateContent",
         headers={"x-goog-api-key": os.environ["GEMINI_API_KEY"]},
         json={
             "contents": [{"parts": [{"text": prompt}]}],
