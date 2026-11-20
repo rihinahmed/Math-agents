@@ -1,0 +1,5 @@
+{
+  "image_url": "https://raw.githubusercontent.com/rihinahmed/Math-agents/main/posters/2026-11-20.png",
+  "caption": "Ready to sharpen your algebra skills for your upcoming exams? Tackle this classic question on factorising and simplifying algebraic expressions! Try it in the comments! Solution pinned below. #IGCSEMaths #OLevelMaths #BeyondTheEquation",
+  "solution": "Answer: 3x\n\n1. Factorise the numerator: 6x^2 - 18x = 6x(x - 3).\n2. Factorise the denominator: 2x - 6 = 2(x - 3).\n3. Rewrite the fraction: [6x(x - 3)] / [2(x - 3)].\n4. Cancel the common factor (x - 3): 6x / 2 = 3x."
+}
