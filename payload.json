@@ -1,5 +1,5 @@
 {
-  "image_url": "https://raw.githubusercontent.com/rihinahmed/Math-agents/main/posters/2026-11-20.png",
-  "caption": "Welcome back to Beyond the Equation! Today we are tackling algebraic expansion and factorisation\u2014a core topic for your IGCSE/O Level exams. Can you handle this difference of two squares challenge?\nTry it in the comments! Solution pinned below.\n#IGCSEMaths #OLevelMaths #Algebra",
-  "solution": "Answer: 4x^2 - 20x + 25 and 4(x - 4)(x - 1)\n\n1. Expand (2x - 5)^2:\n(2x - 5)(2x - 5) = 4x^2 - 10x - 10x + 25 = 4x^2 - 20x + 25.\n\n2. Factorise (2x - 5)^2 - 9 using difference of two squares, a^2 - b^2 = (a - b)(a + b):\nHere, a = (2x - 5) and b = 3.\n((2x - 5) - 3)((2x - 5) + 3) = (2x - 8)(2x - 2).\n\n3. Factorise common factors from each bracket:\n2(x - 4) * 2(x - 1) = 4(x - 4)(x - 1)."
+  "image_url": "https://raw.githubusercontent.com/rihinahmed/Math-agents/main/posters/2026-11-21.png",
+  "caption": "Ready to sharpen your algebra skills for your upcoming exams? Here is a classic linear equation problem that tests your bracket expansion and balancing steps! Try it in the comments! Solution pinned below. #IGCSE #Maths #OLevel",
+  "solution": "Answer: x = 9\n\n1. Expand the brackets on the left side: 8x - 12 - 2x - 2 = 3x + 13\n2. Simplify the left side by combining like terms: 6x - 14 = 3x + 13\n3. Subtract 3x from both sides: 3x - 14 = 13\n4. Add 14 to both sides: 3x = 27\n5. Divide by 3: x = 9"
 }

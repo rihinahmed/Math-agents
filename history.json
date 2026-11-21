@@ -8,5 +8,10 @@
     "date": "2026-11-20",
     "topic": "Expanding and factorising algebraic expressions",
     "problem": "Expand and simplify: (2x - 5)^2. Hence, factorise completely: (2x - 5)^2 - 9."
+  },
+  {
+    "date": "2026-11-21",
+    "topic": "Solving linear equations",
+    "problem": "Solve the equation: 4(2x - 3) - 2(x + 1) = 3x + 13"
   }
 ]
