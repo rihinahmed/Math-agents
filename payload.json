@@ -1,5 +1,5 @@
 {
-  "image_url": "https://raw.githubusercontent.com/rihinahmed/Math-agents/main/posters/2026-11-21.png",
-  "caption": "Ready to sharpen your algebra skills for your upcoming exams? Here is a classic linear equation problem that tests your bracket expansion and balancing steps! Try it in the comments! Solution pinned below. #IGCSE #Maths #OLevel",
-  "solution": "Answer: x = 9\n\n1. Expand the brackets on the left side: 8x - 12 - 2x - 2 = 3x + 13\n2. Simplify the left side by combining like terms: 6x - 14 = 3x + 13\n3. Subtract 3x from both sides: 3x - 14 = 13\n4. Add 14 to both sides: 3x = 27\n5. Divide by 3: x = 9"
+  "image_url": "https://raw.githubusercontent.com/rihinahmed/Math-agents/main/posters/2026-11-22.png",
+  "caption": "Ready to conquer quadratics today? Grab your calculator and test your skills on this classic IGCSE exam question!\nTry it in the comments! Solution pinned below.\n#IGCSEMaths #OLevelMaths #BeyondTheEquation",
+  "solution": "Answer: x = 3.19 or x = 0.31\n\n1. Identify coefficients: a = 2, b = -7, c = 2.\n2. Use the quadratic formula: x = [-b +- sqrt(b^2 - 4ac)] / (2a).\n3. Substitute values: x = [7 +- sqrt((-7)^2 - 4(2)(2))] / (2 * 2).\n4. Simplify inside the square root: x = [7 +- sqrt(49 - 16)] / 4 = [7 +- sqrt(33)] / 4.\n5. Calculate values: x = (7 + 5.7446) / 4 = 3.186... and x = (7 - 5.7446) / 4 = 0.3138...\n6. Round to 2 decimal places: x = 3.19 or x = 0.31."
 }

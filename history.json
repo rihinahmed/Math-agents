@@ -13,5 +13,10 @@
     "date": "2026-11-21",
     "topic": "Solving linear equations",
     "problem": "Solve the equation: 4(2x - 3) - 2(x + 1) = 3x + 13"
+  },
+  {
+    "date": "2026-11-22",
+    "topic": "Quadratic equations (factorising / formula)",
+    "problem": "Solve the equation 2x^2 - 7x + 2 = 0. Give your answers correct to 2 decimal places."
   }
 ]
