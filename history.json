@@ -18,5 +18,10 @@
     "date": "2026-11-22",
     "topic": "Quadratic equations (factorising / formula)",
     "problem": "Solve the equation 2x^2 - 7x + 2 = 0. Give your answers correct to 2 decimal places."
+  },
+  {
+    "date": "2026-11-23",
+    "topic": "Simultaneous equations",
+    "problem": "Solve the simultaneous equations:\n2x + 3y = 18\n5x - y = 11"
   }
 ]

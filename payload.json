@@ -1,5 +1,5 @@
 {
-  "image_url": "https://raw.githubusercontent.com/rihinahmed/Math-agents/main/posters/2026-11-22.png",
-  "caption": "Ready to conquer quadratics today? Grab your calculator and test your skills on this classic IGCSE exam question!\nTry it in the comments! Solution pinned below.\n#IGCSEMaths #OLevelMaths #BeyondTheEquation",
-  "solution": "Answer: x = 3.19 or x = 0.31\n\n1. Identify coefficients: a = 2, b = -7, c = 2.\n2. Use the quadratic formula: x = [-b +- sqrt(b^2 - 4ac)] / (2a).\n3. Substitute values: x = [7 +- sqrt((-7)^2 - 4(2)(2))] / (2 * 2).\n4. Simplify inside the square root: x = [7 +- sqrt(49 - 16)] / 4 = [7 +- sqrt(33)] / 4.\n5. Calculate values: x = (7 + 5.7446) / 4 = 3.186... and x = (7 - 5.7446) / 4 = 0.3138...\n6. Round to 2 decimal places: x = 3.19 or x = 0.31."
+  "image_url": "https://raw.githubusercontent.com/rihinahmed/Math-agents/main/posters/2026-11-23.png",
+  "caption": "Ready to test your algebra skills today? Grab a pen and paper to solve this classic simultaneous equations problem!\n\nTry it in the comments! Solution pinned below.\n#IGCSE #OLevel #MathsRevision",
+  "solution": "Answer: x = 3, y = 4\n\n1) Label equations: (1) 2x + 3y = 18 and (2) 5x - y = 11.\n2) Rearrange (2) to give y = 5x - 11.\n3) Substitute y into (1): 2x + 3(5x - 11) = 18.\n4) Expand: 2x + 15x - 33 = 18.\n5) Combine like terms: 17x = 51, so x = 3.\n6) Substitute x = 3 into y = 5x - 11: y = 5(3) - 11 = 4.\nFinal answer: x = 3, y = 4."
 }
