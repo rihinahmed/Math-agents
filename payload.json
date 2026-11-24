@@ -1,5 +1,5 @@
 {
-  "image_url": "https://raw.githubusercontent.com/rihinahmed/Math-agents/main/posters/2026-11-23.png",
-  "caption": "Ready to test your algebra skills today? Grab a pen and paper to solve this classic simultaneous equations problem!\n\nTry it in the comments! Solution pinned below.\n#IGCSE #OLevel #MathsRevision",
-  "solution": "Answer: x = 3, y = 4\n\n1) Label equations: (1) 2x + 3y = 18 and (2) 5x - y = 11.\n2) Rearrange (2) to give y = 5x - 11.\n3) Substitute y into (1): 2x + 3(5x - 11) = 18.\n4) Expand: 2x + 15x - 33 = 18.\n5) Combine like terms: 17x = 51, so x = 3.\n6) Substitute x = 3 into y = 5x - 11: y = 5(3) - 11 = 4.\nFinal answer: x = 3, y = 4."
+  "image_url": "https://raw.githubusercontent.com/rihinahmed/Math-agents/main/posters/2026-11-24.png",
+  "caption": "Ready to conquer index equations today?\nTest your skills with this classic O Level question on changing bases!\nTry it in the comments! Solution pinned below. #Indices #IGCSEMaths #OLevelMaths",
+  "solution": "Answer: x = 5/4\n\n1. Express both bases as powers of 2: (2^2)^(x + 1) = (2^3)^(2x - 1).\n2. Multiply exponents: 2^(2x + 2) = 2^(6x - 3).\n3. Equate the powers: 2x + 2 = 6x - 3.\n4. Subtract 2x from both sides: 2 = 4x - 3.\n5. Add 3 to both sides: 5 = 4x.\n6. Divide by 4: x = 5/4 (or 1.25)."
 }

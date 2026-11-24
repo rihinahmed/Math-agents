@@ -23,5 +23,10 @@
     "date": "2026-11-23",
     "topic": "Simultaneous equations",
     "problem": "Solve the simultaneous equations:\n2x + 3y = 18\n5x - y = 11"
+  },
+  {
+    "date": "2026-11-24",
+    "topic": "Indices and surds",
+    "problem": "Solve the equation: 4^(x + 1) = 8^(2x - 1)."
   }
 ]
