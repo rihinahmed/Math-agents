@@ -1,5 +1,5 @@
 {
-  "image_url": "https://raw.githubusercontent.com/rihinahmed/Math-agents/main/posters/2026-11-24.png",
-  "caption": "Ready to conquer index equations today?\nTest your skills with this classic O Level question on changing bases!\nTry it in the comments! Solution pinned below. #Indices #IGCSEMaths #OLevelMaths",
-  "solution": "Answer: x = 5/4\n\n1. Express both bases as powers of 2: (2^2)^(x + 1) = (2^3)^(2x - 1).\n2. Multiply exponents: 2^(2x + 2) = 2^(6x - 3).\n3. Equate the powers: 2x + 2 = 6x - 3.\n4. Subtract 2x from both sides: 2 = 4x - 3.\n5. Add 3 to both sides: 5 = 4x.\n6. Divide by 4: x = 5/4 (or 1.25)."
+  "image_url": "https://raw.githubusercontent.com/rihinahmed/Math-agents/main/posters/2026-11-25.png",
+  "caption": "Ready to test your ratio and percentage skills? \ud83e\udde0 Solve this classic exam-style question today!\n\nTry it in the comments! Solution pinned below. #IGCSEMaths #OLevelMaths #BeyondTheEquation",
+  "solution": "Answer: 25%\n\n1. Let total students = 100.\n2. Divide by ratio 3:2 -> Boys = (3/5) * 100 = 60, Girls = (2/5) * 100 = 40.\n3. Boys playing chess = 15% of 60 = 0.15 * 60 = 9.\n4. Girls playing chess = 40% of 40 = 0.40 * 40 = 16.\n5. Total chess players = 9 + 16 = 25.\n6. Percentage = (25 / 100) * 100 = 25%."
 }
