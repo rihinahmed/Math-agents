@@ -38,5 +38,10 @@
     "date": "2026-11-26",
     "topic": "Fractions and decimals",
     "problem": "Convert the recurring decimal 0.41666... into a fraction in its simplest form."
+  },
+  {
+    "date": "2026-11-27",
+    "topic": "Pythagoras' theorem",
+    "problem": "A rectangular field measures 30 m by 40 m. A runner takes a shortcut along the diagonal instead of walking along two adjacent sides. How much distance does the runner save?"
   }
 ]

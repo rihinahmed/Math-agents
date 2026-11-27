@@ -1,5 +1,5 @@
 {
-  "image_url": "https://raw.githubusercontent.com/rihinahmed/Math-agents/main/posters/2026-11-26.png",
-  "caption": "Can you convert a repeating decimal into a fraction without a calculator? \ud83d\udca1 Test your speed with today's quick IGCSE challenge!\n\nTry it in the comments! Solution pinned below. #IGCSEMaths #OLevelMaths #BeyondTheEquation",
-  "solution": "Answer: 5/12\n\n1. Let x = 0.41666...\n2. Multiply by 100: 100x = 41.666...\n3. Multiply by 1000: 1000x = 416.666...\n4. Subtract the two equations: 1000x - 100x = 416.666... - 41.666...\n5. This gives 900x = 375.\n6. Divide to get x = 375/900.\n7. Simplify by dividing the numerator and denominator by 75: x = 5/12."
+  "image_url": "https://raw.githubusercontent.com/rihinahmed/Math-agents/main/posters/2026-11-27.png",
+  "caption": "Can you use Pythagoras' theorem to find the ultimate shortcut? Test your geometry skills with today's quick question!\n\nTry it in the comments! Solution pinned below.\n#Maths #IGCSE #OLevel",
+  "solution": "Answer: 20 m\n\n1. Calculate the diagonal length using Pythagoras' theorem: d^2 = 30^2 + 40^2 = 900 + 1600 = 2500.\n2. Find d: d = sqrt(2500) = 50 m.\n3. Distance along two sides: 30 + 40 = 70 m.\n4. Calculate distance saved: 70 - 50 = 20 m."
 }
