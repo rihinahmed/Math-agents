@@ -1,5 +1,5 @@
 {
-  "image_url": "https://raw.githubusercontent.com/rihinahmed/Math-agents/main/posters/2026-11-27.png",
-  "caption": "Can you use Pythagoras' theorem to find the ultimate shortcut? Test your geometry skills with today's quick question!\n\nTry it in the comments! Solution pinned below.\n#Maths #IGCSE #OLevel",
-  "solution": "Answer: 20 m\n\n1. Calculate the diagonal length using Pythagoras' theorem: d^2 = 30^2 + 40^2 = 900 + 1600 = 2500.\n2. Find d: d = sqrt(2500) = 50 m.\n3. Distance along two sides: 30 + 40 = 70 m.\n4. Calculate distance saved: 70 - 50 = 20 m."
+  "image_url": "https://raw.githubusercontent.com/rihinahmed/Math-agents/main/posters/2026-11-28.png",
+  "caption": "Ready to test your trigonometry skills? Today we are using basic trig ratios to find an unknown side length in a right-angled triangle.\n\nTry it in the comments! Solution pinned below. #Trigonometry #IGCSEMaths #BeyondTheEquation",
+  "solution": "Answer: 6.88 cm\n\n1. Identify the given information: Hypotenuse (AC) = 12 cm, Angle A = 35 degrees, and Opposite side = BC.\n2. Use the sine ratio: sin(angle) = Opposite / Hypotenuse.\n3. Substitute the values: sin(35 degrees) = BC / 12.\n4. Rearrange to solve for BC: BC = 12 * sin(35 degrees).\n5. Calculate: BC = 12 * 0.573576... = 6.8829 cm.\n6. Round to 3 significant figures: BC = 6.88 cm."
 }

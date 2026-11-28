@@ -43,5 +43,10 @@
     "date": "2026-11-27",
     "topic": "Pythagoras' theorem",
     "problem": "A rectangular field measures 30 m by 40 m. A runner takes a shortcut along the diagonal instead of walking along two adjacent sides. How much distance does the runner save?"
+  },
+  {
+    "date": "2026-11-28",
+    "topic": "Trigonometry in right-angled triangles",
+    "problem": "A right-angled triangle ABC has angle B = 90 degrees, angle A = 35 degrees, and hypotenuse AC = 12 cm. Calculate the length of side BC, giving your answer correct to 3 significant figures."
   }
 ]
